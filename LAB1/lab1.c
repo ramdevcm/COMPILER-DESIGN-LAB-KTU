@@ -20,7 +20,7 @@ void main()
 			c=getc(f1);
 			while(isdigit(c))
 			{
-				tokenvalue = tokenvalue*10 + '0';
+				tokenvalue = tokenvalue*10 + (c - 48);
 				c=getc(f1);
 			}
 			num[i++]=tokenvalue;
@@ -42,7 +42,7 @@ void main()
 			printf(" ");
 		else if(c == '\n')
 			lineno++;
-		else 
+		else
 			putc(c,f3);
 	}
 	fclose(f2);
@@ -72,7 +72,7 @@ void main()
 	}
 
 	fclose(f2);
-	
+
 	k = 0;
 
 	f3=fopen("specialchar","r");
@@ -80,7 +80,7 @@ void main()
 	while((c=getc(f3))!=EOF)
 	{
 		if( c == '+' || c == '-' || c == '/' || c == '*' || c == '%' || c == '<' || c == '>' || c == '=' || c == '!' || c == '&' || c == '|' )
-		{	
+		{
 			op[k] = c;
 			k++;
 		}
@@ -89,7 +89,7 @@ void main()
 	}
 
 	printf("\n");
-	
+
 	if(k != 0)
 	{
 		printf("\nOperators are");
@@ -98,22 +98,22 @@ void main()
 			printf(" %c ",op[i]);
 		}
 		printf("\n");
-		
+
 	}
-	
+
 
 	fclose(f3);
 
 	printf("\nTotal no. of lines are:%d\n\n",lineno);
-	
+
 }
 
 void keyword(char str[10])
 {
-	
 
-	if(strcmp("for",str)==0||strcmp("while",str)==0||strcmp("do",str)==0|| strcmp("int",str)==0||strcmp("float",str)==0|| strcmp("char",str)==0|| strcmp("double",str)==0||strcmp("static",str)==0 || strcmp("switch",str)==0||strcmp("case",str)==0||strcmp("void",str)==0 || strcmp("main",str)==0||strcmp("printf",str)==0) 
-	
+
+	if(strcmp("for",str)==0||strcmp("while",str)==0||strcmp("do",str)==0|| strcmp("int",str)==0||strcmp("float",str)==0|| strcmp("char",str)==0|| strcmp("double",str)==0||strcmp("static",str)==0 || strcmp("switch",str)==0||strcmp("case",str)==0||strcmp("void",str)==0 || strcmp("main",str)==0||strcmp("printf",str)==0)
+
 		printf("\t%s\t\t",str);
 	else
 		printf("\t\t\t%s\t\t",str);
