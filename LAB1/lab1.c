@@ -58,8 +58,8 @@ void main()
 	f2=fopen("identifier","r");
 	k=0;
 
-	printf("\nThe keywords and identifiers are:");
-	printf("\n\tKEYWORD\t\tIDENTIFIER\n");
+	printf("\nThe keywords and identifiers are:\n");
+	printf("\n\tKEYWORD\t\tIDENTIFIER\n\n");
 	while((c=getc(f2))!=EOF)
 	{
 		if(c!=' ')
@@ -105,7 +105,7 @@ void main()
 
 	fclose(f3);
 
-	printf("Total no. of lines are:%d\n",lineno);
+	printf("\nTotal no. of lines are:%d\n\n",lineno);
 	
 }
 
@@ -113,11 +113,11 @@ void keyword(char str[10])
 {
 	
 
-	if(strcmp("for",str)==0||strcmp("while",str)==0||strcmp("do",str)==0|| strcmp("int",str)==0||strcmp("float",str)==0||strcmp("char",str)==0|| strcmp("double",str)==0||strcmp("static",str)==0 || strcmp("switch",str)==0||strcmp("case",str)==0||strcmp("void",str)==0) 
+	if(strcmp("for",str)==0||strcmp("while",str)==0||strcmp("do",str)==0|| strcmp("int",str)==0||strcmp("float",str)==0|| strcmp("char",str)==0|| strcmp("double",str)==0||strcmp("static",str)==0 || strcmp("switch",str)==0||strcmp("case",str)==0||strcmp("void",str)==0 || strcmp("main",str)==0||strcmp("printf",str)==0) 
 	
-		printf("\t%s",str);
+		printf("\t%s\t\t",str);
 	else
-		printf("\t\t\t%s",str);
+		printf("\t\t\t%s\t\t",str);
 
 	printf("\n");
 }
