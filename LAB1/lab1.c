@@ -8,7 +8,6 @@ void main()
 	char c,str[10],op[10];
 	int num[100],lineno=0,tokenvalue=0,i=0,j=0,k=0;
 
-
 	f1=fopen("input.c","r");
 	f2=fopen("identifier","w");
 	f3=fopen("specialchar","w");
