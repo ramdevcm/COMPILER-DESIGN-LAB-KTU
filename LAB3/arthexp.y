@@ -45,7 +45,7 @@ E:
 //driver code
 void main()
 {
-   printf("\nEnter Any Arithmetic Expression which can have operations Addition, Subtraction, Multiplication, Division, Modulus and Round brackets:\n");
+   printf("\nEnter Any Arithmetic Expression :\n");
   
    yyparse();
    if(flag==0)
