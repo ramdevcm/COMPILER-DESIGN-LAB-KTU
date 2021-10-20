@@ -45,16 +45,14 @@ E:
 //driver code
 void main()
 {
-   printf("\nEnter Any Arithmetic Expression which 
-                   can have operations Addition, 
-                   Subtraction, Multiplication, Division, 
-                          Modulus and Round brackets:\n");
+   printf("\nEnter Any Arithmetic Expression which can have operations Addition, Subtraction, Multiplication, Division, Modulus and Round brackets:\n");
   
    yyparse();
    if(flag==0)
    printf("\nEntered arithmetic expression is Valid\n\n");
 }
-  
+
+//built-in func to display error message is occured 
 void yyerror()
 {
    printf("\nEntered arithmetic expression is Invalid\n\n");
