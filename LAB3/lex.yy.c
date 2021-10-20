@@ -737,30 +737,32 @@ YY_RULE_SETUP
 case 2:
 YY_RULE_SETUP
 #line 16 "arthexp.l"
-return ID; 
+{
+          return ID;
+       }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 18 "arthexp.l"
+#line 20 "arthexp.l"
 ;              //skip whitespace
 	YY_BREAK
 case 4:
 /* rule 4 can match eol */
 YY_RULE_SETUP
-#line 20 "arthexp.l"
+#line 22 "arthexp.l"
 return 0;      //skip lines by returning 0
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 22 "arthexp.l"
+#line 24 "arthexp.l"
 return yytext[0]; //anything other than above things
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 24 "arthexp.l"
+#line 26 "arthexp.l"
 ECHO;
 	YY_BREAK
-#line 764 "lex.yy.c"
+#line 766 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1765,7 +1767,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 24 "arthexp.l"
+#line 26 "arthexp.l"
 
   
 int yywrap()        //to return 1 when EOF is encountered

@@ -13,7 +13,9 @@
   
        }
 
-[a-zA-Z]+ return ID; 
+[a-zA-Z]+ {
+          return ID;
+       }
 
 [\t] ;              //skip whitespace
   

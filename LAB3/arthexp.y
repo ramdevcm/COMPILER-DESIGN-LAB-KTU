@@ -4,7 +4,7 @@
   int flag=0;
 %}
   
-%token NUMBER
+%token NUMBER ID
   
 %left '+' '-'
   
